@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Itim&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* navigation bar */
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar{
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  font-family: 'ubuntu',sans-serif;
+  background: none;
+  /* background: rgb(70, 68, 165); */
+  /* display: flex; */
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+  padding: 0px 35px;
+  background: rgb(70, 68, 165);
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a{
+  font-size: 35px;
+  color: white;
+  /* text-shadow: 1px 1px rgb(70, 68, 165); */
+}
+.logo a span{
+  font-size: 35px;
+  color: rgb(70, 68, 165);
+  transition: color 0.3s ease;
+}
+.navbar.sticky .logo a span{
+  /* font-size: 35px; */
+  color: white;
+}
+.navbar .menu li{
+  display: inline-block ;
+}
+.navbar .menu li a{
+  padding: 0px 7px;
+  color: white;
+}
+.menu li a:hover{
+  /* padding: 0px 5px; */
+  font-size: large;
+  color: rgb(70, 68, 165);
+}
+.navbar .menu li a:hover{
+  /* padding: 0px 5px; */
+  font-size: large;
+  color: rgb(70, 68, 165);
+}
+.navbar.sticky .menu li a:hover{
+  /* padding: 0px 5px; */
+  font-size: large;
+  color: white;
+}
+/* menu button styling */
+.menu-btn{
+  font-size: 25px;
+  color: white;
+  display:none;
+  cursor: pointer;
+}
+/* home section styling */
+.home{
+  display: flex;
+  background: url("background2.png") no-repeat center;
+  height: 100vh;
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+  font-family: 'ubuntu',sans-serif;
+}
+.home .max-width{
+  margin: auto 0 auto 40px;
+}
+.home-content .text-1{
+font-size: 27px;
+}
+.home-content .text-2{
+font-size: 75px;
+font-weight: 600;
+margin-left: -3px;
+}
+.home-content .text-3{
+  font-size: 40px;
+  margin: 5px 0px;
+}
+
+.home-content .text-3 span{
+  color: rgb(70, 68, 165);
+  font-size: 40px;
+  margin: 5px 0px;
+  font-weight: 400;
+}
+/* responsive query */
+@media(max-width:990px)
+{
+  .max-width{
+    padding: 0 50px;
+  }
+  .menu-btn{
+    padding-top: 30px;
+    display:block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before{
+    content: "\f00d";
+  }
+  .navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0px;
+    /* z-index: -10; */
+    text-align: center;
+    background: #111;
+    transition: all 0.5s ease-in;
+    user-select: none;
+    padding-top:200px ;
+  }
+  .navbar .menu.active{
+    left: 0%;
+  }
+  .navbar .menu li{
+    padding-top:10px ;
+    display: block;
+  }
+  .navbar .menu li a{
+    display:inline-block;
+    margin:20px 0px;
+    font-size:25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* about section */
+#aboutme{
+  height: 100vh;
+  background: url('back4.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.about p{
+  padding-top: 100px;
+  position: relative;
+  font-weight:500;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.about p::before{
+content: "";
+background: #111;
+position: absolute;
+bottom:0px;
+left: 39%;;
+height: 3px;
+width: 250px; */
+transform: translateX(-50%);
+}
+.about p::after{
+
+  content: "Who I Am";
+  color: rgb(70, 68, 165);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+  padding: 0px 5px;
+  background: rgb(245,250,254);
+  position: absolute;
+  bottom:-2px;
+  left: 50%;
+  top: 155px;
+  transform: translateX(-50%);
+}
+
+.aboutimage img{
+  width: 400px;
+  margin-right: 20px;
+  border: 10px rgb(116,201,242) solid;
+  box-shadow: 15px 15px rgb(70, 68, 165);
+  /* border-radius: 10px; */
+  height: auto;
+}
+.main{
+  display: flex;
+}
+.main .rightsec{
+  /* margin-right: 10px; */
+  margin: 0px 15px;
+}
+.main h1{
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* font-family:  'Itim', cursive; */
+font-size: 35px;
+}
+.main p{
+  /* align-self: flex-start; */
+  /* margin-bottom: 10px; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* font-family:  'Itim', cursive; */
+/* font-size: 35px; */
+font-weight: 500
+}
+.main h1 span{
+  color: rgb(70, 68, 165);
+  /* margin-bottom: 20px; */
+}
+.main .leftsec{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .leftsec button{
+  margin-top: 20px;
+  font-size: 25px;
+  background: none;
+  align-self: flex-start;
+  padding: 5px;
+  border: 2px rgb(202, 201, 226) solid;
+  transition: all 0.2s ease-in;
+}
+.main .leftsec button a{
+  color: rgb(202, 201, 226)
+}
+.main .leftsec button:hover{
+  background: rgb(202, 201, 226);
+}
+.main .leftsec button a.active{
+  color: black;
+}
+
+/* services section */
+
+.services{
+background: black;
+height: 100vh;
+background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url('back2.jpg') ;
+background-size: cover;
+}
+.services .about p{
+  padding-top: 100px;
+  position: relative;
+  font-weight:500;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+  /* background: black; */
+  color: white;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.services .about p::before{
+content: "";
+background: white;
+position: absolute;
+bottom:0px;
+left: 39%;;
+height: 3px;
+width: 250px; */
+transform: translateX(-50%);
+}
+.services .about p::after{
+
+  content: "What I Do";
+  color: white;
+  font-size: 25px;
+  padding: 0px 5px;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) black;
+  position: absolute;
+  bottom:0px;
+  left: 50%;
+  top: 155px;
+  transform: translateX(-50%);
+}
+.container{
+  margin: 20px 0px;
+  display: flex;
+/* margin: 10px; */
+}
+.container p{
+  margin: 10px 10px;
+  color: white;
+  text-align: center;
+  /* display: flex; */
+/* margin: 10px; */
+}
+.container div{
+  margin:20px;
+  /* background-color: white; */
+  width: 33%;
+height: 280px;
+display: flex;
+transition: all 0.3s ease;
+cursor: pointer;
+flex-direction: column;
+/* border: 2px white solid; */
+/* transition: all 2s ease ; */
+}
+.container div:hover{
+  background: rgb(70, 68, 165);
+  
+}
+.container div i{
+  margin: 20px 0px;
+font-size: 70px;
+color: rgb(70, 68, 165);
+/* color: white; */
+align-self: center;
+
+}
+.container .div1 i.active{
+color: white;
+
+}
+.container .div2 i.active{
+color: white;
+
+}
+.container .div3 i.active{
+color: white;
+
+}
+.container div h2{
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: white;
+font-size: 24px;
+align-self: center;
+
+}
+
+/* skills styling starts from  here */
+.skill{
+  height: 100vh;
+  background: url('back3.jpg');
+  background-size: cover;
+}
+.bubbles img{
+  /* bottom: 50%; */
+  width:50px;
+  animation: bubble 7s linear infinite;
+  overflow: hidden;
+  opacity: 30;
+}
+.bubbles img:nth-child(1){
+animation-delay: 2s;
+width: 25px;
+}
+.bubbles img:nth-child(2){
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+  animation-delay: 3s;
+  width: 25px;
+}
+.bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+  /* width: 25px; */
+}
+.bubbles img:nth-child(5){
+  animation-delay: 2s;
+  width: 20px;
+}
+.bubbles img:nth-child(6){
+  animation-delay: 5s;
+  width: 35px;
+}
+.bubbles{
+  /* overflow: hidden; */
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  position: absolute;
+  /* bottom: -50%; */
+}
+@keyframes bubble{
+0%{
+transform: translateY(0);
+opacity: 0;
+}
+50%{
+
+  /* transform: translateY(0); */
+  opacity: 1;
+}
+70%{
+
+  /* transform: translateY(0); */
+  opacity: 1;
+}
+100%{  
+transform: translateY(-80vh);
+opacity: 0;
+}
+}
+
+
+.skill p{
+  padding-top: 100px;
+  position: relative;
+  font-weight:500;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.skill p::before{
+content: "";
+background: #111;
+position: absolute;
+bottom:0px;
+left: 39%;;
+height: 3px;
+width: 250px; */
+transform: translateX(-50%);
+}
+#readmore{
+  margin-top: 2px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: blue;
+  cursor: pointer;
+}
+.text2.active::after{
+  content: "Natus praesentium adipisci rerum nemo odit nam repellat minus expedita illo. Nulla, animi laudantium! Commodi quae aliquid consequuntur sed? Consectetur inventore commodi ipsam eum distinctio soluta cumque atque tenetur hic voluptate rem, in, sunt quos officiis error reiciendis obcaecati saepe et?";
+}
+.skill p::after{
+
+  content: "What I Know";
+  color: rgb(70, 68, 165);
+  font-size: 25px;
+  padding: 0px 5px;
+  background:rgb(233,232,230);
+  position: absolute;
+  bottom:0px;
+  left: 50%;
+  top: 155px;
+  transform: translateX(-50%);
+}
+.main1{
+  display: flex;
+  /* align-items: center; */
+  margin-top: 10rem;
+  justify-content: center;
+}
+.main1 .left{
+ width: 50%; 
+}
+.main1 .right{
+  margin-left: 20px;
+  width: 40%;
+}
+.text{
+  margin-bottom: 20px;
+}
+.html{
+  scroll-behavior: smooth;
+  justify-content: space-between;
+  display: flex;
+  font-weight: 500;
+  /* font-weight:500; */
+}
+.css{
+justify-content: space-between;
+display: flex;
+font-weight: 500;
+/* font-weight:500; */
+}
+.java{
+justify-content: space-between;
+display: flex;
+font-weight: 500;
+/* font-weight:500; */
+}
+.php{
+justify-content: space-between;
+display: flex;
+font-weight: 500;
+/* font-weight:500; */
+}
+.sql{
+justify-content: space-between;
+display: flex;
+font-weight: 500;
+/* font-weight:500; */
+}
+
+.line{
+  height: 3px;
+  width: 100%;
+  background-color: lightgrey;
+  position: relative;
+  margin-bottom: 30px;
+}
+.line::before{
+  content: "";
+  height: 3px;
+  background-color: rgb(70, 68, 165);
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.html1::before{
+width: 90%;
+}
+.css1::before{
+width: 80%;
+}
+.java1::before{
+width: 70%;
+}
+.php1::before{
+width: 85%;
+}
+.sql1::before{
+width: 65%;
+}
+.text h1{
+  font-size: 35px;
+  font-variant-caps: all-small-caps;
+}
+/* contact us */
+.contactus{
+  height: 100vh;
+  /* background-color: lightgray;
+   */
+   background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('back.jpg') no-repeat ;
+   background-size: cover;
+}
+#info4{
+  padding-top: 80px;
+  position: relative;
+  color: white;
+  font-weight:500;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#info4::before{
+content: "";
+background: white;
+position: absolute;
+bottom:15px;
+left: 39%;;
+height: 3px;
+width: 250px; 
+/* transform: translateX(-50%); */
+}
+.names{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin:10px */
+}
+.names div{
+  /* displfy-content: center; */
+  margin: 0px 80px;
+  /* padding: 0px 20px; */
+}
+.names div input{
+  /* displfy-content: center; */
+  /* margin: 0px 10px; */
+  width: 160%;
+  /* padding: 0px 20px; */
+}
+
+.formdiv label{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  font-size: 25px;
+  /* font-weight: 550; */
+}
+.formdiv input{
+  width: 100%;
+}
+.names2{
+  margin: 0px 120px;
+}
+.form{
+  margin: 0% 10%;
+}
+.formdiv{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  color: white;
+  background: none;
+  border: 2px white solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+textarea{
+  color: white;
+  background: none;
+  border: 2px white solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* button */
+#btn1{
+background: none;
+border: 2px solid;
+border-radius: 10px;
+color: white;
+font-size: 16px;
+padding: 5px;
+}
+
+/* footer */
+footer{
+  /* margin-bottom: 10px; */
+  background-color: black;
+}
+footer p{
+  text-align: center;
+  color: white;
+  padding: 2px;
+  font-size: 10px;
+}
